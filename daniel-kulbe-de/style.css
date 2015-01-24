@@ -21,44 +21,19 @@
 
 
 /* ----------------------------------------------------------------------
- *  OFF-CANVAS MENU
- *  - mobile view only
- * ---------------------------------------------------------------------- */
-
-@import url("jquery.mmenu.css");
-
-/* ----------------------------------------------------------------------
     CUSTOM WEB FONT
     - provide them as local souce to avoid SSL conflicts
     - never compress this part for cross-browser compliance
    ---------------------------------------------------------------------- */
 
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Open Sans Light'), local('OpenSans-Light'), url(../fonts/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(../fonts/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(../fonts/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff) format('woff');
-}
+@import url("fonts.css");
 
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('../fonts/fontawesome-webfont.eot?v=4.0.3');
-  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+/* ----------------------------------------------------------------------
+ *  OFF-CANVAS MENU
+ *  - mobile view only
+ * ---------------------------------------------------------------------- */
+
+@import url("jquery.mmenu.css");
 
 /* ----------------------------------------------------------------------
     RESET
@@ -246,9 +221,9 @@ input[type="radio"] {
 }
 
 input[type="search"] {
-  -webkit-box-sizing: content-box;
-     -moz-box-sizing: content-box;
-          box-sizing: content-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-appearance: textfield;
 }
 
@@ -432,85 +407,21 @@ p.right  {
 
 h1,
 h2 {
-  margin-top: 0;
-  margin-bottom: 17px;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   line-height: 1.1;
-  color: #222222;
+  text-transform: uppercase;
+  color: #222;
 }
 
 h1 {
-  font-size: 50px;
-  text-transform: uppercase;
+  margin: 7.5px 0 12.5px;
+  font-size: 34px;
 }
 
 h2 {
-  font-size: 44px;
-  text-transform: uppercase;
-}
-
-/* SPINNING "LOAD" ANIMATION */
-@-webkit-keyframes loading {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
-}
-
-@keyframes loading {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
-}
-
-/* ----------------------------------------------------------------------
- *  FONT AWSOME ICON FONT
- *
- *  Font Awesome 4.0.3 by @davegandy
- *  http://fontawesome.io - @fontawesome
- *  License - http://fontawesome.io/license
- *  (Font: SIL OFL 1.1, CSS: MIT License)
- * ---------------------------------------------------------------------- */
-
-span.icoYes:before, span.icoNo:before, span.icoWarn, span.icoHourglass:before, span.icoWrench:before, span.icoPause:before, span.icoDeleted:before, span.icoDomain:before, span.icoMail:before, span.icoLock:before, span.icoExt:before, span.icoIPv4:before, span.icoIPv6:before, span.icoBlank:before, span.icoLoading:before {
-	display: inline-block;
-	min-width: 20px;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-	text-align: center;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-span.icoYes:before       { content: "\f00c"; color: #468847; }
-span.icoNo:before        { content: "\f00d"; color: #b94a48; }
-span.icoWarn:before      { content: "\f071"; color: #c09853; }
-span.icoHourglass:before { content: "\f017"; }
-span.icoWrench:before    { content: "\f0ad"; }
-span.icoPause:before     { content: "\f04c"; }
-span.icoDeleted:before   { content: "\f05e"; }
-span.icoDomain:before    { content: "\f0ac"; }
-span.icoMail:before      { content: "\f003"; }
-span.icoLock:before      { content: "\f023"; }
-span.icoExt:before       { content: "\f14c"; }
-span.icoIPv4:before      { content: "\f123"; }
-span.icoIPv6:before      { content: "\f005"; }
-
-span.icoBlank:before     { content: " "; }
-span.icoLoading:before   { content: "\f110";
-  -webkit-animation: loading 1s infinite linear;
-          animation: loading 1s infinite linear;
+	margin: 10px 0;
+  font-size: 20px;
 }
 
 /* ----------------------------------------------------------------------
@@ -587,8 +498,6 @@ header .userInfo .icoLogout {
  * Main navigation
  * ------------------------------------------------------------------------ */
 nav {
-	float: left;
-	width: 16.666666666666664%;
 	padding: 15px;
 }
 
@@ -613,17 +522,17 @@ nav ul > li > span {
   position: relative;
   display: block;
   padding: 7.5px 15px;
-	font-weight: 600;
 }
 
 nav ul > li > span {
 	background-color: #777;
+	font-size: 16px;
+	font-weight: 600;
 	text-transform: uppercase;
 	color: #fff;
 }
 
 nav ul > li > a {
-	font-size: 12px;
 	color: #777;
 }
 
@@ -640,201 +549,92 @@ nav ul > .active > a:focus {
   background-color: #eebe24;
 }
 
-li.ico > a:before {
-	background:url(nav.png);
-	content:" ";
-	position:absolute;
-	left:8px;
-	top:0.3em;
-	height:16px;
-	width:16px;
-}
-
-li.icoHome > a:before { background-position:-16px 0px; }
-li.icoSettings > a:before { background-position:-32px 0px; }
-li.icoUsers > a:before { background-position:-48px 0px; }
-li.icoLiveConfig > a:before { background-position:0px 0px; }
-li.icoCustomers > a:before { background-position:-64px 0px; }
-li.icoReports > a:before { background-position:-80px 0px; }
-li.icoPlans > a:before { background-position:-96px 0px; }
-li.icoMyHosting > a:before { background-position:-112px 0px; }
-li.icoLog > a:before { background-position:-112px 0px; }
-li.icoWebspace > a:before { background-position:-128px 0px; }
-li.icoDomains > a:before { background-position:-144px 0px; }
-li.icoMail > a:before { background-position:-160px 0px; }
-li.icoDB > a:before { background-position:-176px 0px; }
-li.icoCron > a:before { background-position:-192px 0px; }
-li.icoApps > a:before { background-position:-208px 0px; }
-li.icoSSL > a:before { background-position:-224px 0px; }
-li.icoPHP > a:before { background-position:-240px 0px; }
-li.icoServers > a:before { background-position:-256px 0px; }
-li.icoDNS > a:before { background-position:-144px 0px; }
-li.icoCart > a:before { background-position:-288px 0px; }
-li.icoTransfer > a:before { background-position:-304px 0px; }
-li.icoSessions > a:before { background-position:-304px 0px; }
-li.icoPhone > a:before { background-position:-320px 0px; }
-li.icoLinks > a:before { background-position:-336px 0px; }
-
-.mm-menu li.ico > a:before { top:0.8em }
-nav.mm-menu > ul > li.ico { padding-left:24px; }
-nav.mm-menu > ul > li.ico a:before { left:16px; }
-
-/* Quick search ----------------------------------------------------------- */
-form.frmSearch input[type="search"] {
-	border:1px solid #BBBBBB;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	padding:2px 3px;
-/*	font-size:95%; */
-	line-height:125%;
-	color:#464646;
-	margin:3px 0px 0px 8px;
-	width:150px;
-	border-right-color:#DDDDDD;
-	border-bottom-color:#DDDDDD;
-}
-
-form.frmSearch input[type="submit"] {
-	position:relative; left:-24px; top:-2px; border:0; padding:0;
-	width:16px; height:16px; vertical-align:middle;
-	margin:0px -18px 0px 0px;
-	background:url(nav.png) no-repeat -272px 0px;
-	cursor:normal;
-}
-
 /* ------------------------------------------------------------------------
  * Sub-navigation
  * ------------------------------------------------------------------------ */
-nav.subnav > ul {
-	list-style:none;
-	padding:0;
-	margin:0px -10px 0px 0px;
-	position:relative;
-	font-size:0;
-	border-top:1px solid #BBBBBB;
-	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 1px, rgba(0,0,0,0) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(1px,rgba(0,0,0,0.1)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 1px,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 1px,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 1px,rgba(0,0,0,0) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 1px,rgba(0,0,0,0) 100%); /* W3C */
-	height:16px;
+
+.subnav {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding: 0;
+	border-bottom: 2px solid #eebe24;
 }
 
-nav.subnav > ul > li {
-	display:inline-block;
-	position:relative;
-	top:-12px;
-	border-top:1px solid #BBBBBB;
-	border-bottom:1px solid #BBBBBB;
-	border-right:1px solid #BBBBBB;
-	font-size:10pt;
-	line-height:12pt;
-	background: #ffffff; /* Old browsers */
-	background: -moz-linear-gradient(top,  #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f1f1f1), color-stop(51%,#e1e1e1), color-stop(100%,#f6f6f6)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
+.subnav ul {
+	width: 100%;
+	margin: 0;
 }
 
-nav.subnav > ul > li:hover {
-	background: #e6e6e6; /* Old browsers */
-	background: -moz-linear-gradient(top,  #e6e6e6 0%, #d9d9d9 50%, #cbcbcb 51%, #dddddd 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e6e6e6), color-stop(50%,#d9d9d9), color-stop(51%,#cbcbcb), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #e6e6e6 0%,#d9d9d9 50%,#cbcbcb 51%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #e6e6e6 0%,#d9d9d9 50%,#cbcbcb 51%,#dddddd 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #e6e6e6 0%,#d9d9d9 50%,#cbcbcb 51%,#dddddd 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #e6e6e6 0%,#d9d9d9 50%,#cbcbcb 51%,#dddddd 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e6e6', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+.subnav ul > li {
+	display: table-cell;
+	width: 1%;
 }
 
-nav.subnav > ul > li.active {
-	font-weight:bold;
-	background: #ebf1f6; /* Old browsers */
-	background: -moz-linear-gradient(top,  #ebf1f6 0%, #abd3ee 50%, #89c3eb 51%, #d5ebfb 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebf1f6), color-stop(50%,#abd3ee), color-stop(51%,#89c3eb), color-stop(100%,#d5ebfb)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf1f6', endColorstr='#d5ebfb',GradientType=0 ); /* IE6-9 */
-	text-shadow: 0px 0px 2px #FFFFFF;
+.subnav ul > li a {
+	text-align: center;
 }
 
-nav.subnav > ul > li:first-child {
-	border-left:1px solid #BBBBBB;
-	-webkit-border-top-left-radius: 3px;
-	-moz-border-top-left-radius: 3px;
-	border-top-left-radius: 3px;
-	-webkit-border-bottom-left-radius: 3px;
-	-moz-border-bottom-left-radius: 3px;
-	border-bottom-left-radius: 3px;
+@media (min-width: 1200px) {
+	.subnav ul > li {
+		display: block;
+		width: auto;
+		float: left;
+		margin-right: 3px;
+	}
 }
-
-nav.subnav > ul > li:last-child {
-	-webkit-border-top-right-radius: 3px;
-	-moz-border-top-right-radius: 3px;
-	border-top-right-radius: 3px;
-	-webkit-border-bottom-right-radius: 3px;
-	-moz-border-bottom-right-radius: 3px;
-	border-bottom-right-radius: 3px;
-}
-
-nav.subnav > ul > li > a {
-	display:inline-block;
-	text-decoration:none;
-	color:#464646;
-	padding:2px 6px;
-}
-
-nav.subnav > ul > li:hover > a { outline:0; }
-
-nav.subnav > ul > li.ico > a { padding-left:28px; }
-nav.subnav > ul > li.ico > a:before { top:1.5pt; }
 
 /* ------------------------------------------------------------------------
- * Content area
+ * Content areas
  * ------------------------------------------------------------------------ */
-body > div > section {
+
+body > div > nav,
+body > div > section,
+body > div > footer {
 	float: left;
-	width: 83.33333333333334%;
+	width: 100%;
+	margin-top: 20px;
+}
+
+body > div > nav {
+	display: none;
+}
+
+body > div > section {
 	padding: 15px;
 }
 
-h1 {
-	font-weight:normal;
-	font-size:1.8em;
-}
-
-h2 {
-	color:#555555;
-	font-weight:bold;
-	font-size:1.15em;
-	border-bottom:1px solid #FFFFFF;
-	box-shadow:0px -1px 0px #DDDDDD inset;
-}
-
-/* ------------------------------------------------------------------------
- * Page footer
- * ------------------------------------------------------------------------ */
 body > div > footer {
-	margin:0px 10px 8px 185px;
-	border-top:1px solid #DDDDDD;
-	color:#BBBBBB;
-	text-align:right;
-	font-size:0.8em;
+	padding: 22px 15px;
+	border-top: 1px solid #e4e4e4;
+  line-height: 45px;
+	text-align: right;
+	color: #777;
 }
 
-body > div > footer a {
-	color:#BBBBBB;
+body > div > footer a,
+body > div > footer a:hover,
+body > div > footer a:focus,
+body > div > footer a:active {
+	color: inherit;
 }
 
-body > div > footer a:hover {
-	color:#999999;
+@media screen and (min-width: 640px) {
+	body > div > nav {
+		display: block;
+		width: 25%;
+	}
+	body > div > section {
+		width: 75%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	body > div > nav {
+		width: 16.666666666666664%;
+	}
+	body > div > section {
+		width: 83.33333333333334%;
+	}
 }
 
 /* ------------------------------------------------------------------------
@@ -934,76 +734,12 @@ fieldset[disabled] button:active {
 	border-color: #adadad;
 }
 
-a.button.ico:before,
-button.ico:before {
-	display: inline-block;
-	margin-right: 5px;
-	font-family: FontAwesome;
-	font-style: normal;
-	font-weight: normal;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-a.button.ico[disabled],:before
-button.ico[disabled],:before
-fieldset[disabled] a.button.ico,:before
-fieldset[disabled] button.ico:before {
-	opacity: 0.6;
-}
-
-a.button.ico.icoOK:before,
-button.ico.icoOK:before          { content: "\f00c"; }
-a.button.ico.icoCancel:before,
-button.ico.icoCancel:before      { content: "\f05e"; }
-a.button.ico.icoRegenerate:before,
-button.ico.icoRegenerate:before  { content: "\f021"; }
-a.button.ico.icoDelete:before,
-button.ico.icoDelete:before      { content: "\f014"; }
-a.button.ico.icoManage:before,
-button.ico.icoManage:before      { content: "\f085"; }
-a.button.ico.icoPassword:before,
-button.ico.icoPassword:before    { content: "\f084"; }
-a.button.ico.icoIdea:before,
-button.ico.icoIdea:before        { content: "\f0eb"; }
-a.button.ico.icoNewPassword:before,
-button.ico.icoNewPassword:before { content: "\f069" }
-a.button.ico.icoAdd:before,
-button.ico.icoAdd:before         { content: "\f067"; }
-a.button.ico.icoStart:before,
-button.ico.icoStart:before       { content: "\f101"; }
-a.button.ico.icoEdit:before,
-button.ico.icoEdit:before        { content: "\f040"; }
-a.button.ico.icoDownload:before,
-button.ico.icoDownload:before    { content: "\f0ed"; }
-a.button.ico.icoRemove:before,
-button.ico.icoRemove:before      { content: "\f068"; }
-a.button.ico.icoUpload:before,
-button.ico.icoUpload:before      { content: "\f0ee"; }
-a.button.ico.icoDoc:before,
-button.ico.icoDoc:before         { content: "\f02d"; }
-a.button.ico.icoSpin:before,
-button.ico.icoSpin:before        { content: "\f110";
-	-webkit-animation: loading 1s infinite linear;
-          animation: loading 1s infinite linear;
-}
-
 a.button.small,
 button.small {
 	padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
 }
-
-a.button.small.ico:before,
-button.small.ico:before {
-	height: 12px;
-	width: 12px;
-}
-
-a.button.small.icoLogout.ico:before,
-button.small.icoLogout.ico:before { content: "\f13e"; }
 
 a.button + a.button,
 button + button,
@@ -1216,6 +952,28 @@ fieldset > ol > li.password .pwdDisplay {
 }
 fieldset > ol > li.password .pwdStrength > span {
 	font-weight: 600;
+}
+
+/* Quick search ----------------------------------------------------------- */
+form.frmSearch {
+	position: relative;
+	padding: 15px 10px;
+}
+form.frmSearch input[type="search"] {
+	width: 100%;
+}
+form.frmSearch input[type="submit"] {
+	position: absolute;
+	top: 15px;
+	right: 10px;
+	z-index: 2;
+	display: block;
+	width: 34px;
+	height: 34px;
+	padding: 0;
+	background: transparent;
+	border: 0;
+	cursor: normal;
 }
 
 /* ------------------------------------------------------------------------
