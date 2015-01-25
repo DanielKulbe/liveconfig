@@ -429,12 +429,12 @@ section {
 	padding: 0 15px 15px;
 }
 
-section p.txt {
+section .txt {
 	color: #666666;
 	text-align: justify;
 }
 
-section p.error {
+section .error {
 	padding: 10px 15px;
 	margin-bottom: 20px;
 	background-color: #f2dede;
@@ -444,11 +444,7 @@ section p.error {
 	color: #7c2220;
 }
 
-section p.error hr {
-	border-top-color: #e4b9c0;
-}
-
-section p.error a {
+section .error a {
 	color: #7c2220;
 }
 
@@ -511,15 +507,15 @@ button {
 					user-select: none;
 }
 
-a.button:focus,
+.button:focus,
 button:focus {
 	outline: thin dotted #333;
 	outline: 5px auto -webkit-focus-ring-color;
 	outline-offset: -2px;
 }
 
-a.button:hover,
-a.button:focus,
+.button:hover,
+.button:focus,
 button:hover,
 button:focus {
 	color: #ffffff;
@@ -528,7 +524,7 @@ button:focus {
 	border-color: #f7f7f7;
 }
 
-a.button:active,
+.button:active,
 button:active {
 	color: #ffffff;
 	background-color: #eebe24;
@@ -539,9 +535,9 @@ button:active {
 					box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 
-a.button[disabled],
+.button[disabled],
 button[disabled],
-fieldset[disabled] a.button,
+fieldset[disabled] .button,
 fieldset[disabled] button {
 	pointer-events: none;
 	cursor: not-allowed;
@@ -550,21 +546,21 @@ fieldset[disabled] button {
 	-webkit-box-shadow: none;
 					box-shadow: none;
 }
-a.button[disabled],
+.button[disabled],
 button[disabled],
-fieldset[disabled] a.button,
+fieldset[disabled] .button,
 fieldset[disabled] button,
-a.button[disabled]:hover,
+.button[disabled]:hover,
 button[disabled]:hover,
-fieldset[disabled] a.button:hover,
+fieldset[disabled] .button:hover,
 fieldset[disabled] button:hover,
-a.button[disabled]:focus,
+.button[disabled]:focus,
 button[disabled]:focus,
-fieldset[disabled] a.button:focus,
+fieldset[disabled] .button:focus,
 fieldset[disabled] button:focus,
-a.button[disabled]:active,
+.button[disabled]:active,
 button[disabled]:active,
-fieldset[disabled] a.button:active,
+fieldset[disabled] .button:active,
 fieldset[disabled] button:active {
 	background-color: #ffffff;
 	border-color: #adadad;
@@ -690,7 +686,7 @@ select:focus {
 /* ------------------------------------------------------------------------
  * misc.
  * ------------------------------------------------------------------------ */
-div#bgDisabled {
+#bgDisabled {
 	position: fixed;
 	top: 0;
 	bottom: 0;
@@ -703,7 +699,7 @@ div#bgDisabled {
 	z-index: +1;
 }
 
-div.dPopup {
+.dPopup {
 	position: absolute;
 	z-index: +1;
 	top: 45%;
@@ -721,7 +717,7 @@ div.dPopup {
 					box-shadow: 0 3px 9px rgba(0, 0, 0, .15);
 }
 
-div.dPopup h2 {
+.dPopup h2 {
 	margin: 10px 0;
 	font-size: 24px;
 	line-height: 24px;
@@ -729,12 +725,12 @@ div.dPopup h2 {
 	text-transform: uppercase;
 }
 
-div.dPopup p {
+.dPopup p {
 	margin: 0 0 10px;
 	font-size: 12px;
 }
 
-div.dPopup button {
+.dPopup button {
 	display: inline-block;
 	width: auto;
 	padding: 4px 6px;
