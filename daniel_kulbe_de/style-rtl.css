@@ -1,0 +1,482 @@
+ @charset "utf-8";
+/*!----------------------------------------------------------------------
+ * Daniel-Kulbe.de :: Liveconfig Design | right to left
+ *
+ * @author   Daniel Kulbe <info@daniel-kulbe.de>
+ * @website  http://www.daniel-kulbe.de
+ * @date     2015-01-10
+ *
+ * ----------------------------------------------------------------------
+ *
+ *  _    _          ___           __ _     (R)
+ * | |  (_)_ _____ / __|___ _ _  / _(_)__ _
+ * | |__| \ V / -_) (__/ _ \ ' \|  _| / _` |
+ * |____|_|\_/\___|\___\___/_||_|_| |_\__, |
+ *                                    |___/
+ * Copyright (c) 2009-2014 Keppler IT GmbH.
+ *
+ * ----------------------------------------------------------------------
+ * @for      2015 Daniel Kulbe <www.daniel-kulbe.de>
+ * ---------------------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------------------
+ *  CUSTOM WEB FONT
+ * ---------------------------------------------------------------------- */
+
+a.button.ico:before,
+button.ico:before {
+  margin-right: auto;
+  margin-left: 5px;
+}
+
+.frmSearch:after {
+	right: auto;
+	left: 20px;
+}
+
+table > thead > tr > .sort:after {
+	float: left;
+}
+
+.ulTree div:before,
+.ulFolders li:after {
+	text-align: right;
+}
+
+.msgbox:before {
+	right: 6px;
+	left: auto;
+}
+
+/* ----------------------------------------------------------------------
+ *  OFF-CANVAS MENU
+ * ---------------------------------------------------------------------- */
+
+.mm-menu,
+.mm-menu > .mm-panel {
+	right: 0;
+	left: auto;
+}
+		.mm-list > li > a,
+    .mm-list > li > span {
+    	padding-right: 15px;
+    	padding-left: 10px;
+    }
+  .mm-list a.mm-subopen {
+    right: auto;
+    left: 0;
+  }
+    .mm-list a.mm-subopen:before {
+      border-left: 0 none;
+      border-right: 1px solid;
+      right: 0;
+      left: auto;
+    }
+      .mm-list a.mm-subopen.mm-fullsubopen:before {
+        border-right: none;
+      }
+    .mm-list a.mm-subopen + a,
+    .mm-list a.mm-subopen + span {
+      padding-right: 15px;
+      padding-left: 5px;
+      margin-right: auto;
+      margin-left: 40px;
+    }
+  .mm-list > li.mm-selected > a.mm-fullsubopen + a,
+  .mm-list > li.mm-selected > a.mm-fullsubopen + span {
+    padding-right: 45px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: 0;
+  }
+  .mm-list > li.mm-label {
+  	padding-right: 0;
+  	padding-left: 5px;
+  }
+  .mm-list a.mm-subopen:after {
+    border-top: 2px solid;
+    border-right: none;
+    border-bottom: none;
+    border-left: 2px solid;
+    right: auto;
+    left: 18px;
+  }
+  .mm-list a.mm-subclose:before {
+    border-top: none;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    border-left: none;
+    right: 22px;
+    left: auto;
+  }
+
+.mm-menu.mm-vertical .mm-list .mm-panel {
+  padding-right: 10px;
+  padding-left: 0;
+}
+  .mm-menu.mm-vertical .mm-list > li.mm-opened > a.mm-subopen:after {
+  	right: auto;
+  	left: 16px;
+  }
+
+html.mm-opening .mm-page,
+html.mm-opening #mm-blocker {
+  -webkit-transform: translate(-70%, 0);
+          transform: translate(-70%, 0);
+}
+
+@media all and (max-width: 175px) {
+  .mm-menu {
+    width: 140px;
+  }
+  html.mm-opening .mm-page,
+  html.mm-opening #mm-blocker {
+    -webkit-transform: translate(-140px, 0);
+            transform: translate(-140px, 0);
+  }
+}
+@media all and (min-width: 550px) {
+  html.mm-opening .mm-page,
+  html.mm-opening #mm-blocker {
+    -webkit-transform: translate(-300px, 0);
+            transform: translate(-300px, 0);
+  }
+}
+
+/* ----------------------------------------------------------------------
+ *  BASIC HTML ELEMENTS
+ * ---------------------------------------------------------------------- */
+
+html,
+body {
+  direction: rtl;
+}
+
+.left   {
+	text-align: right;
+}
+
+.right  {
+	text-align: left;
+}
+
+.error {
+	border-right-width: 8px;
+	border-left-width: 1px;
+}
+
+/* ----------------------------------------------------------------------
+ * Header
+ * ---------------------------------------------------------------------- */
+
+header > img {
+	float: right;
+	margin-right: -15px;
+	margin-left: 0
+}
+
+header .userInfo {
+	float: left;
+}
+
+/* ------------------------------------------------------------------------
+ * Main navigation
+ * ------------------------------------------------------------------------ */
+
+nav ul {
+	padding-left: initial;
+	padding-right: 0;
+}
+
+/* ------------------------------------------------------------------------
+ * Sub-navigation
+ * ------------------------------------------------------------------------ */
+
+@media (min-width: 1200px) {
+	.subnav ul > li {
+		float: right;
+		margin-right: initial;
+		margin-left: 3px;
+	}
+}
+
+/* ------------------------------------------------------------------------
+ * Content areas
+ * ------------------------------------------------------------------------ */
+
+body > div > nav,
+body > div > section,
+body > div > footer {
+	float: right;
+}
+
+body > div > footer {
+	text-align: left;
+}
+
+/* ------------------------------------------------------------------------
+ * Buttons
+ * ------------------------------------------------------------------------ */
+
+.button + .button,
+button + button,
+.button + button,
+button + .button,
+input + button,
+input + .button {
+	margin-right: 3px;
+	margin-left: initial;
+}
+
+.buttonFooter {
+	text-align: left;
+}
+
+/* ------------------------------------------------------------------------
+ * Forms and form elements
+ * ------------------------------------------------------------------------ */
+
+fieldset > ol,
+.labeled {
+	text-align: right;
+}
+
+fieldset > ol > li > label:first-child,
+.labeled > li > label:first-child {
+	text-align: left;
+}
+
+form:not([novalidate]) input[type="text"]:invalid,
+form:not([novalidate]) input[type="password"]:invalid,
+form:not([novalidate]) input[type="search"]:invalid,
+form:not([novalidate]) input[type="email"]:invalid,
+form:not([novalidate]) input[type="number"]:invalid,
+form:not([novalidate]) textarea:invalid,
+form:not([novalidate]) select:invalid {
+	border-right: 3px solid #b94a48;
+	border-left: 0 none;
+}
+
+form:not([novalidate]) input[type="text"]:invalid:focus,
+form:not([novalidate]) input[type="password"]:invalid:focus,
+form:not([novalidate]) input[type="search"]:invalid:focus,
+form:not([novalidate]) input[type="email"]:invalid:focus,
+form:not([novalidate]) input[type="number"]:invalid:focus,
+form:not([novalidate]) textarea:invalid:focus,
+form:not([novalidate]) select:invalid:focus {
+	border-right: 3px solid #953b39;
+	border-left: 0 none;
+}
+
+input[type="checkbox"] {
+	margin-right: initial;
+	margin-left: 5px;
+}
+
+/* Quick search --------------------------------------------------------- */
+.frmSearch input[type="submit"] {
+	right: auto;
+	left: 10px;
+}
+.dTableSearch .icoSearch,
+.dTableSearch .icoClear {
+	right: auto;
+	left: 0;
+}
+
+/* ----------------------------------------------------------------------
+ * Tables
+ * ---------------------------------------------------------------------- */
+
+@media (min-width: 760px) {
+	.dTableSearch {
+		float: right;
+	}
+	.dTableNav {
+		float: left;
+	}
+}
+
+table > thead > tr > th {
+	text-align: right;
+}
+
+table > thead > tr > th > .thRsz {
+	right: 0;
+	left: auto;
+}
+
+/* SIMPLE TABLE, FORM TABLE */
+.tabSimple > tbody > tr > th {
+	text-align: right;
+}
+.thLeft > tbody > tr > th,
+.tabBorder > tbody > tr > th {
+	text-align: left;
+}
+
+/* TINY TABLE */
+.tabTiny > tbody > tr > th,
+.tabTiny > tbody > .num > td {
+	text-align: left;
+}
+
+/* ----------------------------------------------------------------------
+ * Selection canvas
+ * ---------------------------------------------------------------------- */
+
+@media (min-width: 760px) {
+	.dSelectCanvas > div {
+		float: right;
+	}
+}
+
+/* AJAX LIST */
+.lcAjaxList {
+	text-align: right;
+}
+
+/* ----------------------------------------------------------------------
+ * Content box
+ * ---------------------------------------------------------------------- */
+
+.dBox {
+	float: right;
+}
+
+.dBox > .img > img {
+	float: right;
+	margin-right: auto;
+	margin-left: 5px;
+}
+
+/* ----------------------------------------------------------------------
+ * Tree view
+ * ---------------------------------------------------------------------- */
+
+.ulTree,
+.ulTree ul {
+	margin-right: 20px;
+	margin-left: 0;
+	padding-left: initial;
+	padding-right: 20px;
+	border-right: 1px dotted;
+	border-left: 0 none;
+}
+
+.ulTree ul {
+	margin-right: 5px;
+	margin-left: 0;
+}
+
+.ulTree li:before {
+	right: -20px;
+	left: auto;
+}
+
+.ulTree div {
+	float: right;
+	margin-right: -30px;
+	margin-left: initial;
+}
+
+.checkable {
+	padding-left: initial;
+	padding-right: 38px;
+}
+.checkable > li:before {
+	left: auto;
+	right: -38px;
+}
+.checkable > li > div {
+	margin-right: -46px;
+	margin-left: auto;
+}
+.checkable > li > div + div {
+	margin-right: -30px;
+	margin-left: auto;
+}
+
+/* -------------------------------------------------------------------------
+ * Folder list
+ * ---------------------------------------------------------------------- */
+
+.ulFolders,
+.ulFolders ul {
+	margin-right: 20px;
+	margin-left: 0;
+	padding-right: 20px;
+	padding-left: initial;
+	border-right: 1px dotted;
+	border-left: 0 none;
+}
+.ulFolders ul {
+	margin-right: 5px;
+	margin-left: 0;
+}
+
+.ulFolders li:before {
+	right: -20px;
+	left: auto;
+}
+
+.ulFolders li:after {
+	right: -29px;
+	left: auto;
+}
+
+.dFillBar > span {
+	right: auto;
+	left: 2px;
+}
+
+/* ------------------------------------------------------------------------
+ * Filled bar (status/progress/etc.)
+ * ------------------------------------------------------------------------ */
+
+.dFillBar > .dFillBarContentMarker {
+	left: auto;
+	right: 50%;
+	padding-right: 2px;
+	padding-left: initial;
+	border-right: 0 none;
+	border-left: 1px solid #fff;
+}
+
+/* ----------------------------------------------------------------------
+ * Popup
+ * ---------------------------------------------------------------------- */
+
+.dPopupClose {
+	right: auto;
+	left: 2px;
+}
+
+.msgbox {
+	padding-right: 44px;
+	padding-left: 0;
+}
+
+/* ---------------------------------------------------------------------------
+ * Mini-Graph
+ * ------------------------------------------------------------------------ */
+
+.tabMinigraph ul .active:before {
+	float: right;
+	margin-right: -13px;
+	margin-left: auto;
+	border-right-width: 0;
+	border-left-width: 8px;
+}
+
+/* ------------------------------------------------------------------------
+ * Mobile Navigation
+ * ------------------------------------------------------------------------ */
+
+.button.header {
+	right: auto;
+	left: 15px;
+}
+
+/* <EOF> ---------------------------------------------------------------- */

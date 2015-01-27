@@ -1,0 +1,357 @@
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(opensans-light.woff2) format('woff2'), url(opensans-light.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(opensans-normal.woff2) format('woff2'), url(opensans-normal.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(opensans-semibold.woff2) format('woff2'), url(opensans-semibold.woff) format('woff');
+}
+
+/* ----------------------------------------------------------------------
+ *  FONT AWSOME ICON FONT
+ *
+ *  Font Awesome 4.3.0 by @davegandy
+ *  http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license
+ *  (Font: SIL OFL 1.1, CSS: MIT License)
+ * ---------------------------------------------------------------------- */
+
+/* SPINNING "LOAD" ANIMATION */
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+/* BLINK "LOAD" ANIMATION */
+@-webkit-keyframes blink {
+  0% {
+    color: inherit;
+  }
+  50% {
+    color: #eee;
+  }
+  100% {
+    color: inherit;
+  }
+}
+
+@keyframes blink {
+  0% {
+    color: inherit;
+  }
+  50% {
+    color: #eee;
+  }
+  100% {
+    color: inherit;
+  }
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(fontawesome-webfont.eot?v=4.3.0);
+  src: url(fontawesome-webfont.eot?#iefix&v=4.3.0) format('embedded-opentype'), url(fontawesome-webfont.woff2?v=4.3.0) format('woff2'), url(fontawesome-webfont.woff?v=4.3.0) format('woff'), url(fontawesome-webfont.ttf?v=4.3.0) format('truetype'), url(fontawesome-webfont.svg?v=4.3.0#fontawesomeregular) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.dError:before {
+  font: normal normal normal 40px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  content: "\f071";
+  color: #eebe24;
+  text-shadow: 2px 1px 0 #fff, 5px 3px 0 #999;
+}
+
+span.icoYes:before, span.icoNo:before, span.icoWarn, span.icoHourglass:before, span.icoWrench:before, span.icoPause:before, span.icoDeleted:before, span.icoDomain:before, span.icoMail:before, span.icoLock:before, span.icoExt:before, span.icoIPv4:before, span.icoIPv6:before, span.icoBlank:before, span.icoLoading:before {
+  display: inline-block;
+  min-width: 20px;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+span.icoYes:before       { content: "\f00c"; color: #468847; }
+span.icoNo:before        { content: "\f00d"; color: #b94a48; }
+span.icoWarn:before      { content: "\f071"; color: #c09853; }
+span.icoHourglass:before { content: "\f017"; }
+span.icoWrench:before    { content: "\f0ad"; }
+span.icoPause:before     { content: "\f04c"; }
+span.icoDeleted:before   { content: "\f05e"; }
+span.icoDomain:before    { content: "\f0ac"; }
+span.icoMail:before      { content: "\f003"; }
+span.icoLock:before      { content: "\f023"; }
+span.icoExt:before       { content: "\f14c"; }
+span.icoIPv4:before      { content: "\f123"; }
+span.icoIPv6:before      { content: "\f005"; }
+
+span.icoBlank:before     { content: " "; }
+span.icoLoading:before   { content: "\f110";
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-animation: loading 1s infinite linear;
+          animation: loading 1s infinite linear;
+}
+
+li.ico > a:before {
+  display: inline-block;
+  min-width: 30px;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+li.icoHome > a:before       { content: "\f015"; }
+li.icoSettings > a:before   { content: "\f085"; }
+li.icoUsers > a:before      { content: "\f0c0"; }
+li.icoLiveConfig > a:before { content: "\f0e4"; }
+li.icoCustomers > a:before  { content: "\f183"; }
+li.icoReports > a:before    { content: "\f080"; }
+li.icoPlans > a:before      { content: "\f0f6"; }
+li.icoMyHosting > a:before  { content: "\f02c"; }
+li.icoLog > a:before        { content: "\f03a"; }
+li.icoWebspace > a:before   { content: "\f200"; }
+li.icoDomains > a:before    { content: "\f0ac"; }
+li.icoMail > a:before       { content: "\f003"; }
+li.icoDB > a:before         { content: "\f1c0"; }
+li.icoCron > a:before       { content: "\f017"; }
+li.icoApps > a:before       { content: "\f135"; }
+li.icoSSL > a:before        { content: "\f023"; }
+li.icoPHP > a:before        { content: "\f121"; }
+li.icoServers > a:before    { content: "\f233"; }
+li.icoDNS > a:before        { content: "\f120"; }
+li.icoCart > a:before       { content: "\f07a"; }
+li.icoTransfer > a:before   { content: "\f0c5"; }
+li.icoSessions > a:before   { content: "\f097"; }
+li.icoPhone > a:before      { content: "\f095"; }
+li.icoLinks > a:before      { content: "\f0c1"; }
+
+a.button.ico:before,
+button.ico:before {
+  display: inline-block;
+  margin-right: 5px;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a.button.ico[disabled],:before
+button.ico[disabled],:before
+fieldset[disabled] a.button.ico,:before
+fieldset[disabled] button.ico:before {
+  opacity: 0.6;
+}
+
+a.button.ico.icoOK:before,
+button.ico.icoOK:before          { content: "\f00c"; }
+a.button.ico.icoCancel:before,
+button.ico.icoCancel:before      { content: "\f05e"; }
+a.button.ico.icoRegenerate:before,
+button.ico.icoRegenerate:before  { content: "\f021"; }
+a.button.ico.icoDelete:before,
+button.ico.icoDelete:before      { content: "\f014"; }
+a.button.ico.icoManage:before,
+button.ico.icoManage:before      { content: "\f085"; }
+a.button.ico.icoPassword:before,
+button.ico.icoPassword:before    { content: "\f084"; }
+a.button.ico.icoIdea:before,
+button.ico.icoIdea:before        { content: "\f0eb"; }
+a.button.ico.icoNewPassword:before,
+button.ico.icoNewPassword:before { content: "\f069" }
+a.button.ico.icoAdd:before,
+button.ico.icoAdd:before         { content: "\f067"; }
+a.button.ico.icoStart:before,
+button.ico.icoStart:before       { content: "\f04b"; }
+a.button.ico.icoEdit:before,
+button.ico.icoEdit:before        { content: "\f040"; }
+a.button.ico.icoDownload:before,
+button.ico.icoDownload:before    { content: "\f0ed"; }
+a.button.ico.icoRemove:before,
+button.ico.icoRemove:before      { content: "\f068"; }
+a.button.ico.icoUpload:before,
+button.ico.icoUpload:before      { content: "\f0ee"; }
+a.button.ico.icoDoc:before,
+button.ico.icoDoc:before         { content: "\f02d"; }
+a.button.ico.icoSpin:before,
+button.ico.icoSpin:before        { content: "\f110";
+  -webkit-animation: loading 1s infinite linear;
+          animation: loading 1s infinite linear;
+}
+
+a.button.small.ico:before,
+button.small.ico:before {
+  height: 12px;
+  width: 12px;
+}
+
+a.button.small.icoLogout.ico:before,
+button.small.icoLogout.ico:before { content: "\f13e"; }
+
+.frmSearch:after {
+  display: inline-block;
+  font: normal normal normal 16px/1 FontAwesome;
+  text-rendering: auto;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  position: absolute;
+  top: 23px;
+  right: 20px;
+  content: "\f002";
+}
+.mm-menu .frmSearch:after {
+  top: 8px;
+}
+
+.dTableSearch .icoSearch:before,
+.dTableSearch .icoClear:before {
+  display: inline-block;
+  font: normal normal normal 16px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: inherit;
+}
+
+.dTableSearch .icoSearch:before { content: "\f002"; }
+.dTableSearch .icoClear:before  { content: "\f00d"; }
+
+.dHelpIcon:before {
+  display: inline-block;
+  vertical-align: middle;
+  font: normal normal normal 16px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  content: "\f059";
+  color: inherit;
+}
+
+table > thead > tr > .sort:after {
+  display: inline-block;
+  font: normal normal normal 16px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: inherit;
+
+  float: right;
+  font-size: 150%;
+  content: "\f106";
+}
+
+table > thead > tr > .sort.sortUp:after {
+  content: "\f107";
+}
+
+.ulTree div:before,
+.ulFolders li:after {
+  display: block;
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  width: 14px;
+  height: 14px;
+  text-align: left;
+  color: inherit;
+}
+
+.ulTree .plus:before      { content: "\f196"; }
+.ulTree .minus:before     { content: "\f147"; }
+.ulTree .chkNo:before     { content: "\f096"; }
+.ulTree .chkYes:before    { content: "\f046"; }
+.ulTree .chkSome:before   { content: "\f046"; }
+.ulFolders li:after       { content: "\f114"; }
+.ulFolders .loading:after {
+  -webkit-animation: blink 1s infinite steps(8);
+          animation: blink 1s infinite steps(8);
+}
+
+.dPopupClose:before {
+  display: block;
+  font: normal normal normal 16px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  text-align: center;
+  content: "\f00d"
+}
+
+.msgbox:before {
+  display: block;
+  font: normal normal normal 32px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  position: absolute;
+  left: 6px;
+  top: 0;
+  height: 32px;
+  width: 32px;
+}
+
+.msgbox.icoWarning:before { content: "\f071"; }
+.msgbox.icoLogout:before  { content: "\f13e"; }
+.msgbox.icoInfo:before    { content: "\f05a"; }
+
+#dMobileNavBtn:before {
+  display: block;
+  font: normal normal normal 35px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  content: "\f0c9";
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  color: inherit;
+}
