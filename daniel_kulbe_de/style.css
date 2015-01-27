@@ -1902,7 +1902,7 @@ div.tabData {
 
 .msgbox {
   position: relative;
-  padding-left: 44px;
+  padding: 10px 10px 10px 44px;
 }
 
 /* ---------------------------------------------------------------------------
