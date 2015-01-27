@@ -1,211 +1,482 @@
-@charset "utf-8";
-/*  _    _          ___           __ _     (R)
+ @charset "utf-8";
+/*!----------------------------------------------------------------------
+ * Daniel-Kulbe.de :: Liveconfig Design | right to left
+ *
+ * @author   Daniel Kulbe <info@daniel-kulbe.de>
+ * @website  http://www.daniel-kulbe.de
+ * @date     2015-01-10
+ *
+ * ----------------------------------------------------------------------
+ *
+ *  _    _          ___           __ _     (R)
  * | |  (_)_ _____ / __|___ _ _  / _(_)__ _
  * | |__| \ V / -_) (__/ _ \ ' \|  _| / _` |
  * |____|_|\_/\___|\___\___/_||_|_| |_\__, |
  *                                    |___/
  * Copyright (c) 2009-2014 Keppler IT GmbH.
- * ---------------------------------------------------------------------------
- * $Id: style-rtl.css 3312 2014-12-11 15:25:25Z kk $
  *
- * HTML5 design template - right to left
- * ---------------------------------------------------------------------------
- */
+ * ----------------------------------------------------------------------
+ * @for      2015 Daniel Kulbe <www.daniel-kulbe.de>
+ * ---------------------------------------------------------------------- */
 
+
+/* ----------------------------------------------------------------------
+ *  CUSTOM WEB FONT
+ * ---------------------------------------------------------------------- */
+
+a.button.ico:before,
+button.ico:before {
+  margin-right: auto;
+  margin-left: 5px;
+}
+
+.frmSearch:after {
+	right: auto;
+	left: 20px;
+}
+
+table > thead > tr > .sort:after {
+	float: left;
+}
+
+.ulTree div:before,
+.ulFolders li:after {
+	text-align: right;
+}
+
+.msgbox:before {
+	right: 6px;
+	left: auto;
+}
+
+/* ----------------------------------------------------------------------
+ *  OFF-CANVAS MENU
+ * ---------------------------------------------------------------------- */
+
+.mm-menu,
+.mm-menu > .mm-panel {
+	right: 0;
+	left: auto;
+}
+		.mm-list > li > a,
+    .mm-list > li > span {
+    	padding-right: 15px;
+    	padding-left: 10px;
+    }
+  .mm-list a.mm-subopen {
+    right: auto;
+    left: 0;
+  }
+    .mm-list a.mm-subopen:before {
+      border-left: 0 none;
+      border-right: 1px solid;
+      right: 0;
+      left: auto;
+    }
+      .mm-list a.mm-subopen.mm-fullsubopen:before {
+        border-right: none;
+      }
+    .mm-list a.mm-subopen + a,
+    .mm-list a.mm-subopen + span {
+      padding-right: 15px;
+      padding-left: 5px;
+      margin-right: auto;
+      margin-left: 40px;
+    }
+  .mm-list > li.mm-selected > a.mm-fullsubopen + a,
+  .mm-list > li.mm-selected > a.mm-fullsubopen + span {
+    padding-right: 45px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: 0;
+  }
+  .mm-list > li.mm-label {
+  	padding-right: 0;
+  	padding-left: 5px;
+  }
+  .mm-list a.mm-subopen:after {
+    border-top: 2px solid;
+    border-right: none;
+    border-bottom: none;
+    border-left: 2px solid;
+    right: auto;
+    left: 18px;
+  }
+  .mm-list a.mm-subclose:before {
+    border-top: none;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    border-left: none;
+    right: 22px;
+    left: auto;
+  }
+
+.mm-menu.mm-vertical .mm-list .mm-panel {
+  padding-right: 10px;
+  padding-left: 0;
+}
+  .mm-menu.mm-vertical .mm-list > li.mm-opened > a.mm-subopen:after {
+  	right: auto;
+  	left: 16px;
+  }
+
+html.mm-opening .mm-page,
+html.mm-opening #mm-blocker {
+  -webkit-transform: translate(-70%, 0);
+          transform: translate(-70%, 0);
+}
+
+@media all and (max-width: 175px) {
+  .mm-menu {
+    width: 140px;
+  }
+  html.mm-opening .mm-page,
+  html.mm-opening #mm-blocker {
+    -webkit-transform: translate(-140px, 0);
+            transform: translate(-140px, 0);
+  }
+}
+@media all and (min-width: 550px) {
+  html.mm-opening .mm-page,
+  html.mm-opening #mm-blocker {
+    -webkit-transform: translate(-300px, 0);
+            transform: translate(-300px, 0);
+  }
+}
+
+/* ----------------------------------------------------------------------
+ *  BASIC HTML ELEMENTS
+ * ---------------------------------------------------------------------- */
+
+html,
 body {
-	background:url(bg-rtl.png) repeat-y right 0px;
+  direction: rtl;
 }
 
-/* ------------------------------------------------------------------------
+.left   {
+	text-align: right;
+}
+
+.right  {
+	text-align: left;
+}
+
+.error {
+	border-right-width: 8px;
+	border-left-width: 1px;
+}
+
+/* ----------------------------------------------------------------------
  * Header
- * ------------------------------------------------------------------------ */
-body > header > img { right:5px; }
+ * ---------------------------------------------------------------------- */
 
-body > header > div.userInfo {
-	right:auto;
-	left:30px;
+header > img {
+	float: right;
+	margin-right: -15px;
+	margin-left: 0
 }
 
-body > header > div.userInfo > div.rUser {
-	float:right;
-	margin-left:8px;
-	margin-right:0px;
+header .userInfo {
+	float: left;
 }
 
 /* ------------------------------------------------------------------------
  * Main navigation
  * ------------------------------------------------------------------------ */
-body > nav {
-	float:right;
-}
 
-body > nav > ul > li > span {
-	padding-left:0px;
-	padding-right:8px;
-}
-
-body > nav > ul > li > ul > li {
-	padding-left:0px;
-	padding-right:30px;
-}
-
-li.ico > a:before {
-	right:8px;
+nav ul {
+	padding-left: initial;
+	padding-right: 0;
 }
 
 /* ------------------------------------------------------------------------
  * Sub-navigation
  * ------------------------------------------------------------------------ */
-nav.subnav > ul {
-	margin-right:0px;
-	margin-left:-10px;
-}
 
-nav.subnav > ul > li {
-	display:inline-block;
-	position:relative;
-	top:-12px;
-	border-top:1px solid #BBBBBB;
-	border-bottom:1px solid #BBBBBB;
-	border-right:0;
-	border-left:1px solid #BBBBBB;
-}
-
-nav.subnav > ul > li:first-child {
-	-webkit-border-top-left-radius: 0;
-	-moz-border-top-left-radius: 0;
-	border-top-left-radius: 0;
-	-webkit-border-bottom-left-radius: 0;
-	-moz-border-bottom-left-radius: 0;
-	border-bottom-left-radius: 0;
-	border-right:1px solid #BBBBBB;
-	-webkit-border-top-right-radius: 3px;
-	-moz-border-top-right-radius: 3px;
-	border-top-right-radius: 3px;
-	-webkit-border-bottom-right-radius: 3px;
-	-moz-border-bottom-right-radius: 3px;
-	border-bottom-right-radius: 3px;
-}
-
-nav.subnav > ul > li:last-child {
-	-webkit-border-top-right-radius: 0;
-	-moz-border-top-right-radius: 0;
-	border-top-right-radius: 0;
-	-webkit-border-bottom-right-radius: 0;
-	-moz-border-bottom-right-radius: 0;
-	border-bottom-right-radius: 0;
-	-webkit-border-top-left-radius: 3px;
-	-moz-border-top-left-radius: 3px;
-	border-top-left-radius: 3px;
-	-webkit-border-bottom-left-radius: 3px;
-	-moz-border-bottom-left-radius: 3px;
-	border-bottom-left-radius: 3px;
-}
-
-nav.subnav > ul > li > a {
-	display:inline-block;
-	text-decoration:none;
-	color:#464646;
-	padding:2px 6px;
-}
-
-nav.subnav > ul > li.ico > a {
-	padding-left:6px;
-	padding-right:26px;
+@media (min-width: 1200px) {
+	.subnav ul > li {
+		float: right;
+		margin-right: initial;
+		margin-left: 3px;
+	}
 }
 
 /* ------------------------------------------------------------------------
- * Content area
+ * Content areas
  * ------------------------------------------------------------------------ */
-body > section {
-	margin-left:0px;
-	margin-right:175px;
+
+body > div > nav,
+body > div > section,
+body > div > footer {
+	float: right;
 }
 
-/* ------------------------------------------------------------------------
- * Page footer
- * ------------------------------------------------------------------------ */
-body > footer {
-	margin-right:185px;
-	margin-left:10px;
-	text-align:left;
+body > div > footer {
+	text-align: left;
 }
 
 /* ------------------------------------------------------------------------
  * Buttons
  * ------------------------------------------------------------------------ */
-a.button.ico {
-	padding-right:24px;
-	padding-left:5px;
+
+.button + .button,
+button + button,
+.button + button,
+button + .button,
+input + button,
+input + .button {
+	margin-right: 3px;
+	margin-left: initial;
 }
 
-/*
-a.button.ico:before {
-	position:absolute;
-	right:4px;
-	margin-left:-16px;
-	margin-right:0px;
+.buttonFooter {
+	text-align: left;
 }
-*/
-a.button.ico:before {
-	content:none;
-}
-
-a.button.ico:after {
-	content:" ";
-	background:url(btn.png);
-/*
-	position:absolute;
-	left:5px;
-	top:2px;
-*/
-	display:inline-block;
-	position:relative;
-	right:-19px;
-	top:3px;
-	margin-left:-16px;
-	height:16px;
-	width:16px;
-}
-
-a.button.icoOK.ico:after { background-position:0px 0px; }
-a.button.icoDelete.ico:after { background-position:-16px 0px; }
-a.button.icoManage.ico:after { background-position:-32px 0px; }
-a.button.icoPassword.ico:after { background-position:-48px 0px; }
-a.button.icoCancel.ico:after { background-position:0px -16px; }
-a.button.icoRegenerate.ico:after { background-position:-16px -16px; }
-a.button.icoIdea.ico:after { background-position:-32px -16px; }
-a.button.icoNewPassword.ico:after { background-position:-48px -16px; }
-a.button.icoAdd.ico:after { background-position:0px -32px; }
-a.button.icoStart.ico:after { background-position:-16px -32px; }
-a.button.icoEdit.ico:after { background-position:-32px -32px; }
-a.button.icoDownload.ico:after { background-position:-48px -32px; }
-a.button.icoRemove.ico:after { background-position:0px -48px; }
-a.button.icoUpload.ico:after { background-position:-16px -48px; }
-a.button.icoDoc.ico:after { background-position:-32px -48px; }
 
 /* ------------------------------------------------------------------------
- * Tables
+ * Forms and form elements
  * ------------------------------------------------------------------------ */
 
-div.dTableNav {
-	float:left;
+fieldset > ol,
+.labeled {
+	text-align: right;
 }
 
-div.dTableData {
-	clear:left;
+fieldset > ol > li > label,
+.labeled > li > label {
+	text-align: left;
 }
 
-div.dTableData > table > thead > tr > th {
-	text-align:right;
+form:not([novalidate]) input[type="text"]:invalid,
+form:not([novalidate]) input[type="password"]:invalid,
+form:not([novalidate]) input[type="search"]:invalid,
+form:not([novalidate]) input[type="email"]:invalid,
+form:not([novalidate]) input[type="number"]:invalid,
+form:not([novalidate]) textarea:invalid,
+form:not([novalidate]) select:invalid {
+	border-right: 3px solid #b94a48;
+	border-left: 0 none;
 }
 
-div.dTableData > table > thead > tr > th.sort:after {
-	float:left;
-	color:#999999;
-	width:10px;
-	margin-right:-10px;
+form:not([novalidate]) input[type="text"]:invalid:focus,
+form:not([novalidate]) input[type="password"]:invalid:focus,
+form:not([novalidate]) input[type="search"]:invalid:focus,
+form:not([novalidate]) input[type="email"]:invalid:focus,
+form:not([novalidate]) input[type="number"]:invalid:focus,
+form:not([novalidate]) textarea:invalid:focus,
+form:not([novalidate]) select:invalid:focus {
+	border-right: 3px solid #953b39;
+	border-left: 0 none;
 }
 
+input[type="checkbox"] {
+	margin-right: initial;
+	margin-left: 5px;
+}
 
-/* <EOF> ------------------------------------------------------------------ */
+/* Quick search --------------------------------------------------------- */
+.frmSearch input[type="submit"] {
+	right: auto;
+	left: 10px;
+}
+.dTableSearch .icoSearch,
+.dTableSearch .icoClear {
+	right: auto;
+	left: 0;
+}
+
+/* ----------------------------------------------------------------------
+ * Tables
+ * ---------------------------------------------------------------------- */
+
+@media (min-width: 760px) {
+	.dTableSearch {
+		float: right;
+	}
+	.dTableNav {
+		float: left;
+	}
+}
+
+table > thead > tr > th {
+	text-align: right;
+}
+
+table > thead > tr > th > .thRsz {
+	right: 0;
+	left: auto;
+}
+
+/* SIMPLE TABLE, FORM TABLE */
+.tabSimple > tbody > tr > th {
+	text-align: right;
+}
+.thLeft > tbody > tr > th,
+.tabBorder > tbody > tr > th {
+	text-align: left;
+}
+
+/* TINY TABLE */
+.tabTiny > tbody > tr > th,
+.tabTiny > tbody > .num > td {
+	text-align: left;
+}
+
+/* ----------------------------------------------------------------------
+ * Selection canvas
+ * ---------------------------------------------------------------------- */
+
+@media (min-width: 760px) {
+	.dSelectCanvas > div {
+		float: right;
+	}
+}
+
+/* AJAX LIST */
+.lcAjaxList {
+	text-align: right;
+}
+
+/* ----------------------------------------------------------------------
+ * Content box
+ * ---------------------------------------------------------------------- */
+
+.dBox {
+	float: right;
+}
+
+.dBox > .img > img {
+	float: right;
+	margin-right: auto;
+	margin-left: 5px;
+}
+
+/* ----------------------------------------------------------------------
+ * Tree view
+ * ---------------------------------------------------------------------- */
+
+.ulTree,
+.ulTree ul {
+	margin-right: 20px;
+	margin-left: 0;
+	padding-left: initial;
+	padding-right: 20px;
+	border-right: 1px dotted;
+	border-left: 0 none;
+}
+
+.ulTree ul {
+	margin-right: 5px;
+	margin-left: 0;
+}
+
+.ulTree li:before {
+	right: -20px;
+	left: auto;
+}
+
+.ulTree div {
+	float: right;
+	margin-right: -30px;
+	margin-left: initial;
+}
+
+.checkable {
+	padding-left: initial;
+	padding-right: 38px;
+}
+.checkable > li:before {
+	left: auto;
+	right: -38px;
+}
+.checkable > li > div {
+	margin-right: -46px;
+	margin-left: auto;
+}
+.checkable > li > div + div {
+	margin-right: -30px;
+	margin-left: auto;
+}
+
+/* -------------------------------------------------------------------------
+ * Folder list
+ * ---------------------------------------------------------------------- */
+
+.ulFolders,
+.ulFolders ul {
+	margin-right: 20px;
+	margin-left: 0;
+	padding-right: 20px;
+	padding-left: initial;
+	border-right: 1px dotted;
+	border-left: 0 none;
+}
+.ulFolders ul {
+	margin-right: 5px;
+	margin-left: 0;
+}
+
+.ulFolders li:before {
+	right: -20px;
+	left: auto;
+}
+
+.ulFolders li:after {
+	right: -29px;
+	left: auto;
+}
+
+.dFillBar > span {
+	right: auto;
+	left: 2px;
+}
+
+/* ------------------------------------------------------------------------
+ * Filled bar (status/progress/etc.)
+ * ------------------------------------------------------------------------ */
+
+.dFillBar > .dFillBarContentMarker {
+	left: auto;
+	right: 50%;
+	padding-right: 2px;
+	padding-left: initial;
+	border-right: 0 none;
+	border-left: 1px solid #fff;
+}
+
+/* ----------------------------------------------------------------------
+ * Popup
+ * ---------------------------------------------------------------------- */
+
+.dPopupClose {
+	right: auto;
+	left: 2px;
+}
+
+.msgbox {
+	padding-right: 44px;
+	padding-left: 0;
+}
+
+/* ---------------------------------------------------------------------------
+ * Mini-Graph
+ * ------------------------------------------------------------------------ */
+
+.tabMinigraph ul .active:before {
+	float: right;
+	margin-right: -13px;
+	margin-left: auto;
+	border-right-width: 0;
+	border-left-width: 8px;
+}
+
+/* ------------------------------------------------------------------------
+ * Mobile Navigation
+ * ------------------------------------------------------------------------ */
+
+.button.header {
+	right: auto;
+	left: 15px;
+}
+
+/* <EOF> ---------------------------------------------------------------- */
