@@ -381,18 +381,18 @@ textarea {
   line-height: inherit;
 }
 
-a {
+a[href] {
   color: #eebe24;
   text-decoration: none;
 }
 
-a:hover,
-a:focus {
+a[href]:hover,
+a[href]:focus {
   color: #eebe24;
   text-decoration: underline;
 }
 
-a:focus {
+a[href]:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
