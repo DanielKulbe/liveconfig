@@ -398,6 +398,13 @@ a:focus {
   outline-offset: -2px;
 }
 
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px dotted #eebe24;
+  border-bottom: 1px solid #fff;
+}
+
 p {
   margin: 0 0 10px;
 }
@@ -2078,10 +2085,22 @@ div.tabData {
   text-align: inherit;
 }
 
+.iframe > div.center table > tbody > tr > th {
+  text-align: left;
+}
+
 .iframe > div.center table > tbody > tr > td {
   padding: 4px;
   font-size: 11px;
   white-space: normal;
+}
+
+.iframe > div.center table > tbody > tr > .e {
+  font-weight: 600;
+}
+
+.iframe > div.center table > tbody > tr > .v {
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 
 /* ----------------------------------------------------------------------
