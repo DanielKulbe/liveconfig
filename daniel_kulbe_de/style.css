@@ -2066,6 +2066,19 @@ div.tabData {
   }
 }
 
+/* ------------------------------------------------------------------------
+ * PHPinfo IFrame
+ * ------------------------------------------------------------------------ */
+
+.iframe > div.center {
+  text-align: inherit;
+}
+
+.iframe > div.center table > tbody > tr > td {
+  padding: 4px;
+  font-size: 11px;
+  white-space: normal;
+}
 /* ----------------------------------------------------------------------
  *  GLOBAL HELPERS
  *  - at end of document to make sure they overwrite settings
