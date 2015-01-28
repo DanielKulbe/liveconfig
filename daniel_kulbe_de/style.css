@@ -2083,20 +2083,7 @@ div.tabData {
 
 .iframe > div.center {
   text-align: inherit;
-}
-
-.iframe > div.center table {
-  max-width: 240px;
-}
-@media (min-width: 760px) {
-  .iframe > div.center table {
-    max-width: 440px;
-  }
-}
-@media (min-width: 1200px) {
-  .iframe > div.center table {
-    max-width: 600px;
-  }
+  padding: 5px 0;
 }
 
 .iframe > div.center table > tbody > tr > th {
@@ -2115,6 +2102,7 @@ div.tabData {
 
 .iframe > div.center table > tbody > tr > .v {
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  word-break: break-word;
 }
 
 /* ----------------------------------------------------------------------
