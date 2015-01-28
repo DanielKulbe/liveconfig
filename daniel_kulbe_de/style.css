@@ -2085,6 +2085,20 @@ div.tabData {
   text-align: inherit;
 }
 
+.iframe > div.center table {
+  max-width: 240px;
+}
+@media (min-width: 760px) {
+  .iframe > div.center table {
+    max-width: 440px;
+  }
+}
+@media (min-width: 1200px) {
+  .iframe > div.center table {
+    max-width: 600px;
+  }
+}
+
 .iframe > div.center table > tbody > tr > th {
   text-align: left;
 }
