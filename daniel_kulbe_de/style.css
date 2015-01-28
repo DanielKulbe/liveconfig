@@ -338,6 +338,10 @@ body > div {
   padding-top: 56px;
 }
 
+.iframe {
+  height: auto;
+}
+
 .iframe > div {
   padding: 5px 15px;
 }
@@ -2079,6 +2083,7 @@ div.tabData {
   font-size: 11px;
   white-space: normal;
 }
+
 /* ----------------------------------------------------------------------
  *  GLOBAL HELPERS
  *  - at end of document to make sure they overwrite settings
