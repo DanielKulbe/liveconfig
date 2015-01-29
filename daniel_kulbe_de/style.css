@@ -2114,6 +2114,7 @@ div.tabData {
 .iframe > div.center table > tbody > tr > .v {
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
   word-break: break-word;
+  white-space: normal;
 }
 
 /* ----------------------------------------------------------------------
