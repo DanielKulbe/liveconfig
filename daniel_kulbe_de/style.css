@@ -2110,6 +2110,7 @@ div.tabData {
   font-weight: 600;
 }
 
+.tabData .tabddata > tbody > tr > td:not(:first-child) > a,
 .iframe > div.center table > tbody > tr > .v {
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
   word-break: break-word;
