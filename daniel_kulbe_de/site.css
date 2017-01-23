@@ -40,6 +40,7 @@ body {
 }
 iframe {
   border: 0 none;
+  background: transparent;
 }
 .iframe body {
   padding: 5px 0;

@@ -1321,7 +1321,7 @@ section:after,
 .ulTabs:after,
 .dTableHead:after,
 .dTableFooter:after,
-.ajaxContent:after {
+[data-columns]:after {
   display: block;
   content: " ";
   clear: both;
@@ -1338,8 +1338,8 @@ section:after,
   bottom: 0;
   -webkit-box-shadow: 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12), 0 5px 5px -3px rgba(0,0,0,.3);
           box-shadow: 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12), 0 5px 5px -3px rgba(0,0,0,.3);
-  -webkit-transform: scale(0.995, 0.968);
-          transform: scale(0.995, 0.968);
+  -webkit-transform: scale(0.995, 0.98);
+          transform: scale(0.995, 0.98);
   -webkit-transition: -webkit-transform 0.28s ease-in-out;
           transition: -webkit-transform 0.28s ease-in-out;
           transition: transform 0.28s ease-in-out;
