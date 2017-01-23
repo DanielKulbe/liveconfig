@@ -615,6 +615,7 @@ input.deletable + a {
 }
 
 table {
+  width: 100%;
   background-color: transparent;
   border-collapse: collapse;
   font-size: 85%;
@@ -752,12 +753,7 @@ table > tbody > .deleted input[type="checkbox"] {
 
 /* SIMPLE TABLE, FORM TABLE */
 .tabSimple {
-  width: 100%;
   margin-bottom: 10px;
-}
-.tabBorder,
-.thLeft {
-  width: 100%;
 }
 .tabSimple > tbody > tr > th {
   padding: 8px;
@@ -806,7 +802,6 @@ table > tbody > .deleted input[type="checkbox"] {
 
 /* TINY TABLE */
 .tabTiny {
-  width: 100%;
   margin: 10px 0 0;
   font-size: 75%;
 }
