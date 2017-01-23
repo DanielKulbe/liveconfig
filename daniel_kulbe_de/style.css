@@ -278,7 +278,7 @@ main nav ul > .active > a:after {
  * Content areas
  * ------------------------------------------------------------------------ */
 
-.xfixed {
+body > nav {
   position: fixed;
   top: 0;
   left: -180px;
@@ -293,23 +293,23 @@ main nav ul > .active > a:after {
        -o-transition: .35s ease-in-out left;
           transition: .35s ease-in-out left;
 }
-.xfixed.in {
+body > nav.in {
   left: 0;
 }
-.xfixed > ul {
+body > nav > ul {
   position: relative;
   top: 0;
   -webkit-transition: .35s ease-in-out top;
        -o-transition: .35s ease-in-out top;
           transition: .35s ease-in-out top;
 }
-.xfixed > ul > .active > a,
-.xfixed > ul > .active > a:hover,
-.xfixed > ul > .active > a:focus {
+body > nav > ul > .active > a,
+body > nav > ul > .active > a:hover,
+body > nav > ul > .active > a:focus {
   color: #fff;
   background-color: #eebe24;
 }
-.xfixed > .fixed {
+body > nav > .fixed {
   position: absolute;
   left: 15px;
   right: 15px;
@@ -387,13 +387,12 @@ footer a:active {
 }
 
 @media screen and (min-width: 800px) {
-  .xfixed {
+  body > nav {
     height: calc(100% - 88px);
     margin-top: 88px;
     left: 0;
   }
   main {
-    float: left;
     margin-left: 180px;
   }
   .ajaxSelect {
@@ -536,6 +535,9 @@ input.deletable + a {
   padding: 15px 0;
   border-top: 1px solid #ddd;
   text-align: right;
+}
+.buttonFooter button {
+  margin-left: 3px;
 }
 
 /* ------------------------------------------------------------------------
@@ -873,6 +875,7 @@ table > tbody > .deleted input[type="checkbox"] {
 .dBox.icon .ico.big {
   float: left;
   margin-left: -47px;
+  line-height: .8;
 }
 
 /* ------------------------------------------------------------------------

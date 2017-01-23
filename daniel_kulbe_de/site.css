@@ -38,8 +38,11 @@ body {
   line-height: 1.428571429;
   color: #777;
 }
+iframe {
+  border: 0 none;
+}
 .iframe body {
-  padding: 5px 15px;
+  padding: 5px 0;
   border-top-width: 0;
 }
 
@@ -445,9 +448,9 @@ header {
 header > img {
   display: block;
   float: left;
-  height: auto;
-  margin-left: -15px;
-  padding: 0 15px;
+  width: auto;
+  height: 50px;
+  margin-right: 15px;
   line-height: 60px;
   color: #777;
 }
@@ -459,9 +462,7 @@ header > img {
     padding-bottom: 15px;
   }
   header > img {
-    width: 238px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    height: 60px;
   }
 }
 

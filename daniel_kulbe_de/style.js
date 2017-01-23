@@ -62,7 +62,7 @@ var outdatedBrowser=function(t){function o(t){s.style.opacity=t/100,s.style.filt
 
 +function($){
 	$(function(){
-		var menu = $('.xfixed');
+		var menu = $('body > nav');
 
 		if (!menu.length) return; // no navigation available
 
@@ -76,7 +76,7 @@ var outdatedBrowser=function(t){function o(t){s.style.opacity=t/100,s.style.filt
 		var mainHeight = $('main').height();
 
 		var menuBtn = $('<div id="dMenuIcon">&#x2630;</div>').click(function() {
-			$('.xfixed').toggleClass('in');
+			$('body > nav').toggleClass('in');
 		});
 
 		var sidebar = {
