@@ -470,6 +470,7 @@ header > img {
 footer {
   position: relative;
   clear: both;
+  z-index: +1;
   margin-top: -31px;
 	width: 100%;
   padding: 0 15px;

@@ -326,9 +326,6 @@ main {
 }
 
 /* AJAX LIST */
-section > .ajaxSelect {
-  margin-top: 30px;
-}
 .ajaxSelect ul {
   list-style: none;
   margin-top: 0;
@@ -855,6 +852,10 @@ table > tbody > .deleted input[type="checkbox"] {
   background: #fff;
   border-radius: 1px;
 }
+[data-columns] .dBox {
+  margin-top: 0;
+}
+
 .dBox > h2 {
   height: 37px;
   margin: -15px -15px 7.5px;
@@ -866,6 +867,10 @@ table > tbody > .deleted input[type="checkbox"] {
   line-height: 32px;
   text-transform: none;
   color: #fff;
+}
+.dBox > h2 img {
+  vertical-align: middle;
+  margin-right: 5px;
 }
 
 .dBox.icon {
