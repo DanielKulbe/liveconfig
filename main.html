@@ -6,7 +6,7 @@
                                       |___/
    Copyright (c) 2009-2015 Keppler IT GmbH.
    $Id$
- 
+
    HTML5 design template
 -->
 <html>
@@ -16,9 +16,9 @@
     <!-- <meta name="viewport" content="width=960px, initial-scale=0.25"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>[LiveConfig] HTML5 design template</title>
-    <link rel="shortcut icon" href="default/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="default/style.css">
-    <link rel="stylesheet" type="text/css" href="default/customcolor.css">
+    <link rel="shortcut icon" href="daniel_kulbe_de/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="daniel_kulbe_de/style.css">
+    <!--<link rel="stylesheet" type="text/css" href="default/customcolor.css">-->
 <!-- only presented when user-agent contains 'Apple': -->
 <!--
     <link rel="apple-touch-icon" href="imgs/apple-touch-icon-57x57.png">
@@ -30,7 +30,7 @@
     <meta name="apple-mobile-web-app-title" content="LiveConfig">
 <!-- / -->
     <script src="lib/liveconfig.min.js"></script>
-    <script src="default/style.js"></script>
+    <script src="daniel_kulbe_de/style.js"></script>
     <script type="text/javascript">
       LC._lang='de';
       $(function() {
@@ -150,7 +150,7 @@
             <td><div class="dFillBar"><div class="dFillBarContent red" style="width:90%;"></div></div></td>
           </tr>
         </table>
-        <button type="button" class="ico ico-plus-circle-outline" onclick="var p=LC.popup.url(800,460,'Neue Subdomain', 'domains/edit?id=ZGmhZdYWuz4Qnq4.1AAvdhy2');">Neue Subdomain...</button> 
+        <button type="button" class="ico ico-plus-circle-outline" onclick="var p=LC.popup.url(800,460,'Neue Subdomain', 'domains/edit?id=ZGmhZdYWuz4Qnq4.1AAvdhy2');">Neue Subdomain...</button>
         <button type="button" class="ico ico-plus-circle-outline" onclick="var p=LC.popup.url(550,250,'Externe Domain hinzufügen', 'domains/addext?id=ZGmhZdYWuz4Qnq4.1AAvdhy2');">Externe Domain...</button>
       </div>
 
@@ -432,7 +432,7 @@ var graphCPU = new LC.graph.mini(document.getElementById('graphCPU'), graphCPUDa
           <button type="button" class="ico ico-plus-circle-outline">erstellen...</button>
         </div>
 
-        <div class="dBoxCanvas" data-columns>
+        <div class="ajaxContent" data-columns>
 
           <div class="dBox">
             <h2>php.ini-Einstellungen</h2>
@@ -522,17 +522,17 @@ var graphCPU = new LC.graph.mini(document.getElementById('graphCPU'), graphCPUDa
                 <button class="ico ico-check" type="submit">speichern</button>
               </div>
             </form>
+            <script type="text/javascript">
+              function deleteDialog() {
+                LC.dialog(360, 100, LC.dialog.ICO_WARNING,
+                  'Server entfernen',
+                  'Möchten Sie diesen Server wirklich von LiveConfig entfernen?',
+                  'entfernen', function() {frm.del.value=1;frm.submit();},
+                  'abbrechen', null
+                  );
+              }
+            </script>
           </div>
-<script type="text/javascript">
-  function deleteDialog() {
-    LC.dialog(360, 100, LC.dialog.ICO_WARNING,
-      'Server entfernen',
-      'Möchten Sie diesen Server wirklich von LiveConfig entfernen?',
-      'entfernen', function() {frm.del.value=1;frm.submit();},
-      'abbrechen', null
-      );
-  }
-</script>
 
           <div class="dBox">
             <h2>Berechtigungen</h2>
