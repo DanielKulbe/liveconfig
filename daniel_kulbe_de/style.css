@@ -215,6 +215,7 @@ nav ul > li > span {
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
+  cursor: default;
 }
 nav ul > li > a:hover,
 nav ul > li > a:focus {
@@ -282,13 +283,14 @@ body > nav {
   position: fixed;
   top: 0;
   left: -180px;
-  z-index: +1;
+  z-index: +2;
   width: 180px;
   height: calc(100% - 56px);
   float: left;
   overflow: hidden;
   margin-top: 56px;
   background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
   -webkit-transition: .35s ease-in-out left;
        -o-transition: .35s ease-in-out left;
           transition: .35s ease-in-out left;
@@ -322,7 +324,11 @@ main {
   padding: 15px;
   background: #fafafa;
 }
+
 /* AJAX LIST */
+section > .ajaxSelect {
+  margin-top: 30px;
+}
 .ajaxSelect ul {
   list-style: none;
   margin-top: 0;
@@ -860,10 +866,6 @@ table > tbody > .deleted input[type="checkbox"] {
   line-height: 32px;
   text-transform: none;
   color: #fff;
-}
-
-.ajaxContent .dBox {
-  margin-top: 0;
 }
 
 .dBox.icon {
