@@ -6,7 +6,7 @@ Starting with LiveConfig v1.8.0-r3322 you can use your own, custom CSS templates
 ## CSS override
 
 If you want to do only minor modifications to the default template, you can define an "override CSS". Create a custom CSS file (eg. `custom.css`) and include this into the `main.html` file **after** the `default/style.css`. Define all your CSS overrides there.
-When you're done, copy this file to your LiveConfig server to `/usr/lib/liveconfig/htdocs/`. If not done yet, upload your own logo image to LiveConfig (log in as *admin*, go to *Settings* -> *Reseller* and upload your image file). You will find this file on the server at `/var/lib/liveconfig/html/<Logo>.png`. Now rename your CSS file to the same name (but keep the file extension at `.css`). For example, if you logo file is named `logo1234567890.png`, then your CSS must be at `logo1234567890.css`. That's it - LiveConfig will now automatically include your override CSS.
+When you're done, copy this file to your LiveConfig server to `/var/lib/liveconfig/htdocs/`. If not done yet, upload your own logo image to LiveConfig (log in as *admin*, go to *Settings* -> *Reseller* and upload your image file). You will find this file on the server at `/var/lib/liveconfig/html/<Logo>.png`. Now rename your CSS file to the same name (but keep the file extension at `.css`). For example, if you logo file is named `logo1234567890.png`, then your CSS must be at `logo1234567890.css`. That's it - LiveConfig will now automatically include your override CSS.
 
 ## Custom template
 
@@ -25,9 +25,13 @@ So to provide your own template, you "just" have to create such a cdb file using
 ### Using the template
 
 1. copy the template file into `/usr/share/liveconfig/`
-2. in the LiveConfig database, insert/update the record in LCDEFAULT:
-   ```INSERT INTO LCDEFAULTS (LD_KEY, LD_VALUE) VALUES \
-    ("liveconfig.web.template", "megacool");```
+2. in the LiveConfig database, insert/update the record in LCDEFAULTS:
+
+```
+INSERT INTO LCDEFAULTS (LD_KEY, LD_VALUE) VALUES \
+  ("liveconfig.web.template", "megacool");
+```
+
 3. then restart LiveConfig
 
 ## Legal issues

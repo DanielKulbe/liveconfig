@@ -1,11 +1,11 @@
 @font-face {
 	font-family:"lcicons";
-	src:url("lcicons.eot");
-	src:url("lcicons.eot?#iefix") format("embedded-opentype"),
-		url("lcicons.woff2") format("woff2"),
-		url("lcicons.woff") format("woff"),
-		url("lcicons.ttf") format("truetype"),
-		url("lcicons.svg#lcicons") format("svg");
+	src:url("lcicons.eot?v5");
+	src:url("lcicons.eot?v5#iefix") format("embedded-opentype"),
+		url("lcicons.ttf?v5") format("truetype"),
+		url("lcicons.woff2?v5") format("woff2"),
+		url("lcicons.woff?v5") format("woff"),
+		url("lcicons.svg?v5#lcicons") format("svg");
 	font-weight:normal;
 	font-style:normal;
 }
@@ -61,6 +61,21 @@
 
 .ico-license:before {
 	content:"\f104";
+}
+
+
+.ico-list-more:before {
+	content:"\2335";
+}
+
+
+.ico-lock-open:before {
+	content:"\1f513";
+}
+
+
+.ico-lock:before {
+	content:"\1f512";
 }
 
 
@@ -134,6 +149,11 @@
 }
 
 
+.ico-language-php:before, .ico-php:before {
+	content:"\1f418";
+}
+
+
 .ico-login:before {
 	content:"\2386";
 }
@@ -184,8 +204,18 @@
 }
 
 
-.ico-clock:before {
+.ico-cancel:before {
+	content:"\2300";
+}
+
+
+.ico-clipboard-text:before {
 	content:"\f110";
+}
+
+
+.ico-clock:before {
+	content:"\f111";
 }
 
 
@@ -240,7 +270,7 @@
 
 
 .ico-folder-outline:before {
-	content:"\f111";
+	content:"\f112";
 }
 
 
@@ -250,12 +280,7 @@
 
 
 .ico-information:before {
-	content:"\f112";
-}
-
-
-.ico-lock:before {
-	content:"\1f512";
+	content:"\f113";
 }
 
 
@@ -265,12 +290,12 @@
 
 
 .ico-menu-down:before {
-	content:"\f113";
+	content:"\f114";
 }
 
 
 .ico-menu-up:before {
-	content:"\f114";
+	content:"\f115";
 }
 
 
@@ -281,6 +306,11 @@
 
 .ico-minus-circle-outline:before, .ico-remove:before {
 	content:"\2796";
+}
+
+
+.ico-open-in-new:before {
+	content:"\f116";
 }
 
 
